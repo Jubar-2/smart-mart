@@ -6,19 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export default function Header() {
   return (
     <header className="w-full">
-      {/* Top Bar */}
-      <div className="bg-orange-600 text-white py-2 text-xs">
-        <div className="container mx-auto px-4 flex justify-between">
-          <div className="flex gap-4">
-            <span>Track Order</span>
-          </div>
-          <div className="flex gap-4">
-            <span>Currency: USD</span>
-            <span>Login</span>
-          </div>
-        </div>
-      </div>
-
+    
       {/* Main Header */}
       <div className="border-b py-6 bg-white">
         <div className="container mx-auto px-4 flex items-center justify-between gap-8">
