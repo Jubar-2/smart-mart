@@ -40,13 +40,13 @@ export default function Header() {
 
       {/* Navigation */}
       <div className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 flex items-center gap-8 py-3">
-          <Button className="bg-orange-600 hover:bg-orange-700 flex gap-2">
+        <div className="container mx-auto px-4 flex items-center gap-8">
+          <Button className="bg-orange-600 hover:bg-orange-700 flex gap-2 w-48 rounded-none justify-baseline px-4 py-7 text-[18px] font-medium">
             <Menu size={18}/> Categories
           </Button>
           <nav className="flex gap-6 font-medium text-sm text-gray-600">
             {["Home", "Shop", "Campaign", "Blog", "Pages", "Contact"].map(item => (
-              <a key={item} href="#" className="hover:text-orange-600 transition-colors">{item}</a>
+              <a key={item} href="#" className="hover:text-orange-600 transition-colors text-base">{item}</a>
             ))}
           </nav>
         </div>
