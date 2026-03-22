@@ -43,7 +43,7 @@ const DEALS = [
         oldPrice: null,
         discount: null,
         rating: 0,
-        image: "https://images.unsplash.com/photo-1529139513065-07b2c2390598?q=80&w=400&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=400&auto=format&fit=crop"
     },
     {
         id: 4,
