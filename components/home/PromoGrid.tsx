@@ -14,11 +14,11 @@ interface PromoGridProps {
 
 export default function PromoGrid({ items }: PromoGridProps) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
       {items.map((item, index) => (
         <div 
           key={index}
-          className={`${item.bgColor} rounded-xl p-8 flex items-center justify-between relative overflow-hidden h-[180px] group cursor-pointer`}
+          className={`${item.bgColor} rounded-xl p-8 flex items-center justify-between relative overflow-hidden h-45 group cursor-pointer`}
         >
           {/* Text Content */}
           <div className="z-10 space-y-1">
@@ -31,7 +31,7 @@ export default function PromoGrid({ items }: PromoGridProps) {
           </div>
 
           {/* Product Image */}
-          <div className="relative w-1/2 h-full transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
+          <div className="absolute w-full h-full transition-transform duration-500 group-hover:scale-110 top-0 left-0">
             <Image
               src={item.image}
               alt={item.title}

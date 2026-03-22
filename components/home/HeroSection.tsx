@@ -1,16 +1,47 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { Button } from "@/components/ui/button";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function HeroSection() {
   return (
     <div className="grid grid-cols-12 gap-6">
       <div
-        className="col-span-12 lg:col-span-8 h-[450px] bg-pink-100 rounded-xl relative overflow-hidden flex items-center px-12 
+        className="col-span-12 lg:col-span-8 h-112.5 bg-pink-100 rounded-xl">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          speed={1000}
+          className="h-full"
+        >
+          <SwiperSlide className="h-full">
+            <div className="w-full h-full bg-pink-100 rounded-xl relative overflow-hidden flex items-center px-12 
         bg-[url(https://geniusdevs.com/codecanyon/omnimart/core/public/storage/images/16343905891630493728s2.jpg)]">
-        <div className="max-w-md space-y-4 z-10">
-          <h2 className="text-orange-600 font-bold text-4xl uppercase">50% OFF</h2>
-          <h1 className="text-5xl font-extrabold text-gray-800 leading-tight">Sleeve Party Dress</h1>
-          <Button size="lg" className="bg-orange-600">Shop Now</Button>
-        </div>
+              <div className="max-w-md space-y-4 z-10">
+                <h2 className="text-orange-600 font-bold text-4xl uppercase">50% OFF</h2>
+                <h1 className="text-5xl font-extrabold text-gray-800 leading-tight">Sleeve Party Dress</h1>
+                <Button size="lg" className="bg-orange-600">Shop Now</Button>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="h-full">
+            <div className="w-full h-full bg-pink-100 rounded-xl relative overflow-hidden flex items-center px-12 
+        bg-[url(https://geniusdevs.com/codecanyon/omnimart/core/public/storage/images/16343905891630493728s2.jpg)]">
+              <div className="max-w-md space-y-4 z-10">
+                <h2 className="text-orange-600 font-bold text-4xl uppercase">50% OFF</h2>
+                <h1 className="text-5xl font-extrabold text-gray-800 leading-tight">Sleeve Party Dress</h1>
+                <Button size="lg" className="bg-orange-600">Shop Now</Button>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
       <div className="col-span-12 lg:col-span-4 flex flex-col gap-6">
