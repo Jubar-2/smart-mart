@@ -52,7 +52,6 @@ export async function POST(request: Request) {
       }
     });
 
-
     ApiResponse.success(customer, "User created successfully", 201);
 
   } catch (error) {
