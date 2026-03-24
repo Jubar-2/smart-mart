@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CategoriesOption } from "../header/CategoriesOption";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -44,9 +45,10 @@ export default function Header() {
         <div className="container mx-auto px-4 flex items-center gap-8">
           <CategoriesOption />
           <nav className="flex gap-6 font-medium text-sm text-gray-600">
-            {["Home", "Shop", "Campaign", "Blog", "Pages", "Contact"].map(item => (
-              <a key={item} href="#" className="hover:text-orange-600 transition-colors text-base">{item}</a>
-            ))}
+            <Link href="/" className="hover:text-orange-600 transition-colors text-base">Home</Link>
+            <Link href="/products" className="hover:text-orange-600 transition-colors text-base">products</Link>
+            <Link href="/campaign" className="hover:text-orange-600 transition-colors text-base">Campaign</Link>
+            <Link href="/blog" className="hover:text-orange-600 transition-colors text-base">Blog</Link>
           </nav>
         </div>
       </div>

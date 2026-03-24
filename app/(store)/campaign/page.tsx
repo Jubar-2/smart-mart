@@ -20,7 +20,7 @@ export default function CampaignPage() {
           <div className="relative">
             <h1 className="text-3xl font-bold text-gray-800">Deals Of The Week</h1>
             {/* The orange underline from the design */}
-            <div className="absolute -bottom-[18px] left-0 w-2/3 h-[3px] bg-orange-600 rounded-full" />
+            <div className="absolute -bottom-4.5 left-0 w-2/3 h-0.75 bg-orange-600 rounded-full" />
           </div>
           
           <GlobalTimer />
