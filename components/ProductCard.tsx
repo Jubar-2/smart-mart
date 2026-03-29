@@ -4,13 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 interface ProductProps {
-  title: string;
-  price: number;
+  title?: string;
+  price?: number;
   oldPrice?: number;
   discount?: number;
-  rating: number;
-  image: string;
-  category: string;
+  rating?: number;
+  image?: string;
+  category?: string;
 }
 
 export default function ProductCard({ title, price, oldPrice, discount, rating, image, category }: ProductProps) {
