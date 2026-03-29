@@ -6,7 +6,7 @@ export default function CampaignPage() {
   return (
     <main className="bg-gray-50 min-h-screen py-6">
       <div className="container mx-auto px-4">
-        
+
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-10">
           <Home size={14} className="text-gray-400" />
@@ -22,7 +22,7 @@ export default function CampaignPage() {
             {/* The orange underline from the design */}
             <div className="absolute -bottom-4.5 left-0 w-2/3 h-0.75 bg-orange-600 rounded-full" />
           </div>
-          
+
           <GlobalTimer />
         </div>
 
@@ -30,11 +30,14 @@ export default function CampaignPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {/* Example Data Mapping */}
           {products.map((product) => (
-            <ProductCard 
-              key={product.id} 
-              {...product}
-              // Ensure your ProductCard accepts custom badge colors/labels 
-              // like 'Flash deal' (green), 'Best' (black), 'Feature' (yellow)
+            <ProductCard
+              key={product.id}
+              title={product.title}
+              category={product.category}
+              price={product.price}
+              oldPrice={product.oldPrice}
+              rating={4} // Default rating if not provided      
+              image={product.image} 
             />
           ))}
         </div>
