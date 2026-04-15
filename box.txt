@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js" // Fixed: must be prisma-client-js
+  // output can remain if you specifically want it there, 
+  // but standard practice is leaving it default
+
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Customer {
+  customerId   Int      @id @default(autoincrement())
+  fullName     String
+  phoneNumber  String   @unique
+  email        String?  @unique
+  avatar       String?
+  password     String
+  refreshToken String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  addresses Address[]
+}
+
+model Address {
+  addressId Int @id @default(autoincrement())
+
+  customerId Int
+  customer   Customer @relation(fields: [customerId], references: [customerId])
+
+  addressLine1 String
+  addressLine2 String?
+  zipCode      String
+  city         String
+
+  countryId Int
+  country   Country @relation(fields: [countryId], references: [countryId])
+}
+
+model Country {
+  countryId   Int    @id @default(autoincrement())
+  countryName String
+
+  addresses Address[]
+}

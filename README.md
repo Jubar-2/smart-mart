@@ -35,3 +35,80 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # smart-mart
+
+
+src/
+│
+├── app/                          # 🔥 Core routing system
+│
+│   ├── (store)/                 # Public eCommerce
+│   │   ├── layout.tsx           # Navbar + Footer
+│   │   ├── page.tsx             # Home
+│   │   │
+│   │   ├── products/
+│   │   │   ├── page.tsx
+│   │   │   └── [slug]/page.tsx
+│   │   │
+│   │   ├── cart/page.tsx
+│   │   ├── checkout/page.tsx
+│   │   └── account/
+│   │
+│   ├── (admin)/                 # Admin Panel
+│   │   ├── layout.tsx           # Sidebar layout
+│   │   ├── dashboard/page.tsx
+│   │   │
+│   │   ├── products/
+│   │   │   ├── page.tsx
+│   │   │   ├── create/page.tsx
+│   │   │   └── [id]/edit/page.tsx
+│   │   │
+│   │   ├── orders/
+│   │   ├── customers/
+│   │   └── settings/
+│
+│   ├── api/                     # Backend (Route Handlers)
+│   │   ├── products/route.ts
+│   │   ├── orders/route.ts
+│   │   ├── auth/route.ts
+│   │   └── upload/route.ts
+│
+│   └── layout.tsx               # Root layout
+│
+├── modules/                     # 🔥 Feature-based (VERY IMPORTANT)
+│   ├── product/
+│   │   ├── components/
+│   │   ├── actions/             # 🔥 Server Actions (Next 16)
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   ├── types.ts
+│   │   └── utils.ts
+│   │
+│   ├── order/
+│   ├── cart/
+│   ├── user/
+│   └── payment/
+│
+├── components/                  # Shared UI
+│   ├── ui/                      # shadcn/ui
+│   ├── layout/                  # Navbar, Sidebar
+│   └── shared/
+│
+├── lib/                         # Core logic
+│   ├── db.ts
+│   ├── auth.ts
+│   ├── cache.ts                 # Next 16 caching helpers
+│   └── utils.ts
+│
+├── store/                       # Zustand / global state
+│   ├── cart.store.ts
+│   └── user.store.ts
+│
+├── config/
+│   ├── env.ts
+│   └── site.ts
+│
+├── styles/
+│   └── globals.css
+│
+└── types/
+    └── index.ts
